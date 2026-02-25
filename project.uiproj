@@ -1,0 +1,6 @@
+{
+  "Name": "AMP23_00_Pinturas",
+  "ProjectType": "Process",
+  "Description": "Exportar las lecturas desde la aplicación PosiSoft",
+  "MainFile": "Main.xaml"
+}
