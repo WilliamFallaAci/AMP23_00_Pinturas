@@ -139,7 +139,7 @@
       <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Invoke major steps of the business process, which are usually implemented by multiple subworkflows.&#xA;&#xA;If a BusinessRuleException is thrown, the transaction is skipped. &#xA;If another kind of exception occurs, the current transaction can be retried. " DisplayName="Process" sap:VirtualizedContainerService.HintSize="1072,3553" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Invoke major steps of the business process, which are usually implemented by multiple subworkflows.&#xA;&#xA;If a BusinessRuleException is thrown, the transaction is skipped. &#xA;If another kind of exception occurs, the current transaction can be retried. " DisplayName="Process" sap:VirtualizedContainerService.HintSize="1072,2111" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Default="[String.Empty]" Name="ScreenshotPath" />
       <Variable x:TypeArguments="x:String" Default="[String.Empty]" Name="FinalReportPath" />
@@ -150,8 +150,8 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log Message Process Start" sap:VirtualizedContainerService.HintSize="506,175" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Started Process&quot;]" />
-    <ui:MultipleAssign DisplayName="Multiple Assign - reports path" sap:VirtualizedContainerService.HintSize="506,180" sap2010:WorkflowViewState.IdRef="MultipleAssign_2">
+    <ui:LogMessage DisplayName="Log Message Process Start" sap:VirtualizedContainerService.HintSize="488,175" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Started Process&quot;]" />
+    <ui:MultipleAssign DisplayName="Multiple Assign - reports path" sap:VirtualizedContainerService.HintSize="488,180" sap2010:WorkflowViewState.IdRef="MultipleAssign_2">
       <ui:MultipleAssign.AssignOperations>
         <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
           <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_3">
@@ -173,7 +173,7 @@
         </scg:List>
       </ui:MultipleAssign.AssignOperations>
     </ui:MultipleAssign>
-    <If Condition="[File.Exists(FinalReportPath)]" DisplayName="If - report exist" sap:VirtualizedContainerService.HintSize="506,57" sap2010:WorkflowViewState.IdRef="If_3">
+    <If Condition="[File.Exists(FinalReportPath)]" DisplayName="If - report exist" sap:VirtualizedContainerService.HintSize="488,57" sap2010:WorkflowViewState.IdRef="If_3">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -201,7 +201,7 @@
         </Sequence>
       </If.Else>
     </If>
-    <If Condition="[File.Exists(ScreenshotPath)]" DisplayName="If - screenshot exist" sap:VirtualizedContainerService.HintSize="506,57" sap2010:WorkflowViewState.IdRef="If_4">
+    <If Condition="[File.Exists(ScreenshotPath)]" DisplayName="If - screenshot exist" sap:VirtualizedContainerService.HintSize="488,57" sap2010:WorkflowViewState.IdRef="If_4">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -229,19 +229,20 @@
         </Sequence>
       </If.Else>
     </If>
-    <ui:LogMessage DisplayName="Log Message - download report" sap:VirtualizedContainerService.HintSize="506,175" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;Descargar reporte de PosiSoft&quot;]" />
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="[UiPath.UIAutomationNext.Enums.NAppCloseMode.Never]" DisplayName="PosiSoft Desktop without arguments" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="506,2809" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" OpenMode="[UiPath.UIAutomationNext.Enums.NAppOpenMode.Never]" ScopeGuid="444fa934-eebf-4f39-b598-1c78a2555573" Timeout="[CInt(in_Config(&quot;MediumTimeout&quot;))]" Version="V2" WindowResize="Maximize">
+    <ui:LogMessage DisplayName="Log Message - download report" sap:VirtualizedContainerService.HintSize="488,175" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;Descargar reporte de PosiSoft&quot;]" />
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="[UiPath.UIAutomationNext.Enums.NAppCloseMode.Never]" DisplayName="PosiSoft Desktop without arguments" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="488,1367" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" OpenMode="[UiPath.UIAutomationNext.Enums.NAppOpenMode.Never]" ScopeGuid="444fa934-eebf-4f39-b598-1c78a2555573" Timeout="[CInt(in_Config(&quot;MediumTimeout&quot;))]" Version="V2" WindowResize="Maximize">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="504,2667" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="486,1225" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:String" Name="ReportName" />
               <Variable x:TypeArguments="x:Boolean" Name="RetryDownload" />
               <Variable x:TypeArguments="x:Boolean" Name="DateGreater" />
               <Variable x:TypeArguments="x:Boolean" Name="DateLess" />
+              <Variable x:TypeArguments="sd2:DataTable" Default="[New DataTable]" Name="TempReportTable" />
             </Sequence.Variables>
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -249,24 +250,148 @@
                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:RetryScope LogRetriedExceptions="{x:Null}" ContinueOnError="True" DisplayName="Retry Scope - download report" sap:VirtualizedContainerService.HintSize="470,1825" sap2010:WorkflowViewState.IdRef="RetryScope_1" NumberOfRetries="5" RetriedExceptionsLogLevel="Warn" RetryInterval="00:00:00.5000000">
+            <ui:InterruptibleDoWhile CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="This part was added to solve the issue when the current report is loaded by posisoft in runtime" DisplayName="Export batch reports, read CSV, and delete file" sap:VirtualizedContainerService.HintSize="452,102" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_3" MaxIterations="3">
+              <ui:InterruptibleDoWhile.Body>
+                <Sequence DisplayName="Export batches as CSV, read and delete" sap:VirtualizedContainerService.HintSize="450,1385" sap2010:WorkflowViewState.IdRef="Sequence_22">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <Assign DisplayName="Assign a new DataTable to a variable" sap:VirtualizedContainerService.HintSize="416,175" sap2010:WorkflowViewState.IdRef="Assign_12">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="sd2:DataTable">[TempReportTable]</OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="sd2:DataTable">[New DataTable]</InArgument>
+                    </Assign.Value>
+                  </Assign>
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click -  - report name" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,194" sap2010:WorkflowViewState.IdRef="NClick_5" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="444fa934-eebf-4f39-b598-1c78a2555573" Timeout="[CInt(in_Config(&quot;MediumTimeout&quot;))]" Version="V5">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable ContentHash="jLwLKFDktEO2ZnjGLbmDtA" DesignTimeRectangle="60, 301, 64, 18" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;wnd cls='SWT_GROUP' title='Trabajos y lotes' /&gt;&lt;wnd cls='SysTreeView32' /&gt;&lt;ctrl name='*' role='outline item' aastate='enfocable, seleccionable' /&gt;" Guid="a5dc540e-adfe-4f0b-86ce-8bdb20d4372d" InformativeScreenshot="da44eb5701cba44c092101cadec3e088.png" Reference="Y1oj9uOTOUGwIjjZFNnB3w/oPrZZdKxYUatkQk8yREkJw" ScopeSelectorArgument="&lt;wnd app='javaw.exe' cls='SWT_Window0' title='PosiSoft Desktop' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="[UiPath.UIAutomationNext.Enums.NWaitForReady.Complete]" />
+                    </uix:NClick.Target>
+                  </uix:NClick>
+                  <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts - down arrow" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,57" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_5" InteractionMode="HardwareEvents" ScopeIdentifier="444fa934-eebf-4f39-b598-1c78a2555573" Shortcuts="[d(hk)][k(Down)][u(hk)]" Version="V5">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </uix:NKeyboardShortcuts>
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click - exportar menu" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,194" sap2010:WorkflowViewState.IdRef="NClick_6" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="444fa934-eebf-4f39-b598-1c78a2555573" Timeout="[CInt(in_Config(&quot;MediumTimeout&quot;))]" Version="V5">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable ContentHash="Y86TsqSUhkCA2whtt4qW4w" DesignTimeRectangle="238, 31, 57, 19" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;ctrl automationid='MenuBar' name='Aplicación' role='menu bar' /&gt;&lt;ctrl name='Exportar' role='menu item' /&gt;" Guid="211870f1-9dc0-476d-b69e-8437b76cc45b" InformativeScreenshot="ff9e72cb154b9c755312abb4be71964e.png" Reference="Y1oj9uOTOUGwIjjZFNnB3w/J6VFF3lsaUmZ3DUglGy5cg" ScopeSelectorArgument="&lt;wnd app='javaw.exe' cls='*Window*' title='PosiSoft Desktop' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="[UiPath.UIAutomationNext.Enums.NWaitForReady.Complete]" />
+                    </uix:NClick.Target>
+                  </uix:NClick>
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click - lotes como texto CSV" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,194" sap2010:WorkflowViewState.IdRef="NClick_7" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="444fa934-eebf-4f39-b598-1c78a2555573" Timeout="[CInt(in_Config(&quot;MediumTimeout&quot;))]" Version="V5">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable ContentHash="acl-asIFnkSYdj51axuZPg" DesignTimeRectangle="3, 3, 294, 22" ElementVisibilityArgument="[UiPath.UIAutomationNext.Enums.NElementVisibility.Visible]" FullSelectorArgument="&lt;ctrl name='Exportar' role='popup menu' /&gt;&lt;ctrl name='Lotes como texto CSV' role='menu item' /&gt;" Guid="df806adc-7243-4ab8-bcf7-a9b1d766d81d" InformativeScreenshot="ee7a9ad78c2655e45edec83de413b223.png" Reference="Y1oj9uOTOUGwIjjZFNnB3w/nDRwaxGrykGdFKAIT8YiCQ" ScopeSelectorArgument="&lt;wnd app='javaw.exe' cls='#*' idx='*' aastate='enfocable' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="[UiPath.UIAutomationNext.Enums.NWaitForReady.Complete]" />
+                    </uix:NClick.Target>
+                  </uix:NClick>
+                  <uix:NApplicationCard AttachMode="ByInstance" CloseMode="[UiPath.UIAutomationNext.Enums.NAppCloseMode.Never]" DisplayName="Exportar lote(s)" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="416,57" sap2010:WorkflowViewState.IdRef="NApplicationCard_3" OpenMode="[UiPath.UIAutomationNext.Enums.NAppOpenMode.Never]" ScopeGuid="d8091937-6292-4585-ad0b-12cc8be07339" Timeout="[CInt(in_Config(&quot;MediumTimeout&quot;))]" Version="V2">
+                    <uix:NApplicationCard.Body>
+                      <ActivityAction x:TypeArguments="x:Object">
+                        <ActivityAction.Argument>
+                          <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                        </ActivityAction.Argument>
+                        <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="450,245" sap2010:WorkflowViewState.IdRef="Sequence_26">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <uix:NClick ActivateBefore="True" ClickType="Single" DelayAfter="3" DisplayName="Click - OK button" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,185" sap2010:WorkflowViewState.IdRef="NClick_8" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="444fa934-eebf-4f39-b598-1c78a2555573" Timeout="[CInt(in_Config(&quot;MediumTimeout&quot;))]" Version="V5">
+                            <uix:NClick.Target>
+                              <uix:TargetAnchorable CVScreenId="680e437d-6cba-4c17-bfbb-e18a0cda2466" ContentHash="LiKCqAeWGEqTmkWZZyxC-g" CvElementArea="911, 936, 28, 24" CvTextArea="916, 942, 18, 12" CvTextArgument="OK" CvType="Button" DesignTimeRectangle="911, 936, 28, 25" ElementType="Button" ElementVisibilityArgument="[UiPath.UIAutomationNext.Enums.NElementVisibility.Visible]" FullSelectorArgument="&lt;wnd cls='Button' title='OK' /&gt;" Guid="ee0bfd6c-4c1a-4ca8-bd2f-5afd49b0111e" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAdCAYAAADLnm6HAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFRSURBVEhL7ZY9joMwEIXnWj6Qz+PTuAFxA5AQFfIBQCAKahCa1ZglwT+QjeNNUlC8AmK/+fwYyMA4jvhJgX3j3fo+gGEYsK5rrKoKy7KMJqWU9rbrGQC0gAq3bYvzPOOyLFFEXl3XaW8bwgAgyr7vHYNYappGp3sIQFFN0+RsjCXyphROAexNsUU1LoAwAMkRAG5iQu1+l8iBoVDbtULBAIFLxycMQBd3C9whTADJbcCXANZiXFr3lUAGHKUFoATznjwcwChkg22n/gUQHIEJVM7aVwG8pvtkCGDtDSepKAB/TUDS2n2vuHoe4MkeWBvWBxwM4DNdIz96C3Qjeh9bKMAN4v4dMBOxvwPrq+iDCAeIpAvgFID+q/97HjgFoGmFphZ7YyzRWEZT1yHANhPSwphJkBcd7OFMuEEURYFpmmKSJFGUZRnmee4U9wK8WxfADz7ncu86Mci0AAAAAElFTkSuQmCC" InformativeScreenshot="4af0ac359c237908bb6664843627993f.png" Reference="Y1oj9uOTOUGwIjjZFNnB3w/6_gaVj1aPkKXz44MTUsjLw" ScopeSelectorArgument="&lt;wnd app='javaw.exe' cls='*Window*' title='Exportar lote(s)' /&gt;" SearchSteps="Selector, Image, CV" Version="V6" WaitForReadyArgument="[UiPath.UIAutomationNext.Enums.NWaitForReady.Complete]" />
+                            </uix:NClick.Target>
+                          </uix:NClick>
+                        </Sequence>
+                      </ActivityAction>
+                    </uix:NApplicationCard.Body>
+                    <uix:NApplicationCard.OCREngine>
+                      <ActivityFunc x:TypeArguments="sd:Image, scg:IEnumerable(scg:KeyValuePair(sd1:Rectangle, x:String))">
+                        <ActivityFunc.Argument>
+                          <DelegateInArgument x:TypeArguments="sd:Image" Name="Image" />
+                        </ActivityFunc.Argument>
+                      </ActivityFunc>
+                    </uix:NApplicationCard.OCREngine>
+                    <uix:NApplicationCard.TargetApp>
+                      <uix:TargetApp Area="10, 10, 1015, 974" ContentHash="p6rrFOlXMk6itWV4-Jtefw" IconBase64="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" InformativeScreenshot="3198037ed578d1f71e01a925f0175c36.png" Reference="Y1oj9uOTOUGwIjjZFNnB3w/K2ztSWLiEEmXtmfjiX61BQ" Selector="&lt;wnd app='javaw.exe' cls='*Window*' title='Exportar lote(s)' /&gt;" Version="V2">
+                        <uix:TargetApp.Arguments>
+                          <InArgument x:TypeArguments="x:String" />
+                        </uix:TargetApp.Arguments>
+                        <uix:TargetApp.FilePath>
+                          <InArgument x:TypeArguments="x:String" />
+                        </uix:TargetApp.FilePath>
+                        <uix:TargetApp.WorkingDirectory>
+                          <InArgument x:TypeArguments="x:String" />
+                        </uix:TargetApp.WorkingDirectory>
+                      </uix:TargetApp>
+                    </uix:NApplicationCard.TargetApp>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </uix:NApplicationCard>
+                  <ui:GetLastDownloadedFile File="{x:Null}" FileResource="{x:Null}" Timeout="{x:Null}" DisplayName="Wait for Download - temp report" DownloadFolder="[Path.GetDirectoryName(FinalReportPath)]" sap:VirtualizedContainerService.HintSize="416,57" sap2010:WorkflowViewState.IdRef="GetLastDownloadedFile_2" IgnoreFiles="tmp,dwn">
+                    <ui:GetLastDownloadedFile.Body>
+                      <ActivityAction>
+                        <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DisplayName="Type Into - Save As PopUp" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="400,214" sap2010:WorkflowViewState.IdRef="NTypeInto_2" InteractionMode="SameAsCard" ScopeIdentifier="444fa934-eebf-4f39-b598-1c78a2555573" Text="[String.Format(&quot;{0}[k(enter)]&quot;, FinalReportPath)]" Timeout="[CInt(in_Config(&quot;MediumTimeout&quot;))]" Version="V5">
+                          <uix:NTypeInto.Target>
+                            <uix:TargetAnchorable ContentHash="bz8POPUxjEu0tOlGZGOQLA" DesignTimeRectangle="136, 389, 791, 17" ElementType="InputBox" ElementVisibilityArgument="[UiPath.UIAutomationNext.Enums.NElementVisibility.Visible]" FullSelectorArgument="&lt;wnd aaname='Panel del explorador' cls='DirectUIHWND' /&gt;&lt;wnd aaname='Nombre*' cls='ComboBox' /&gt;&lt;wnd aaname='Nombre*' aastate='enfocable' cls='Edit' /&gt;" Guid="da22eade-58e8-4edb-9308-327a2cd994ba" InformativeScreenshot="e7748cbf1e96a191289791910d1394d3.png" Reference="Y1oj9uOTOUGwIjjZFNnB3w/eUSIdYVYg0OnLqIGYC2x5Q" ScopeSelectorArgument="&lt;wnd app='javaw.exe' cls='#32770' title='Guardar como' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="[UiPath.UIAutomationNext.Enums.NWaitForReady.Complete]" />
+                          </uix:NTypeInto.Target>
+                        </uix:NTypeInto>
+                      </ActivityAction>
+                    </ui:GetLastDownloadedFile.Body>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </ui:GetLastDownloadedFile>
+                  <ui:ReadCsvFile PathResource="{x:Null}" DataTable="[TempReportTable]" Delimitator="Comma" DelimitatorForViewModel="Comma" DisplayName="Read CSV - temp report" FilePath="[FinalReportPath]" sap:VirtualizedContainerService.HintSize="416,170" sap2010:WorkflowViewState.IdRef="ReadCsvFile_3" />
+                  <ui:DeleteFileX DisplayName="Delete File - temp file" sap:VirtualizedContainerService.HintSize="416,113" sap2010:WorkflowViewState.IdRef="DeleteFileX_4" Path="[FinalReportPath]" />
+                  <Delay DisplayName="Delay execution for 5 seconds" Duration="00:00:05" sap:VirtualizedContainerService.HintSize="416,114" sap2010:WorkflowViewState.IdRef="Delay_1" />
+                </Sequence>
+              </ui:InterruptibleDoWhile.Body>
+              <ui:InterruptibleDoWhile.Condition>
+                <VisualBasicValue x:TypeArguments="x:Boolean" DisplayName="Visual basic value" ExpressionText="Not TempReportTable.AsEnumerable.Any(Function (row) row(&quot;Batch_Date/Time&quot;).ToString.Replace(&quot;/&quot;,&quot;-&quot;).Trim.&#xD;&#xA;Contains(Now.ToString(&quot;yyyy-MM-dd&quot;)))" />
+              </ui:InterruptibleDoWhile.Condition>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:InterruptibleDoWhile>
+            <ui:RetryScope LogRetriedExceptions="{x:Null}" ContinueOnError="True" DisplayName="Retry Scope - download report" sap:VirtualizedContainerService.HintSize="452,57" sap2010:WorkflowViewState.IdRef="RetryScope_1" NumberOfRetries="5" RetriedExceptionsLogLevel="Warn" RetryInterval="00:00:00.5000000">
               <ui:RetryScope.ActivityBody>
                 <ActivityAction>
-                  <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="468,1537" sap2010:WorkflowViewState.IdRef="Sequence_4">
-                    <Sequence.Variables>
-                      <Variable x:TypeArguments="sd2:DataTable" Default="[New DataTable]" Name="TempReportTable" />
-                    </Sequence.Variables>
+                  <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="450,1263" sap2010:WorkflowViewState.IdRef="Sequence_4">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click -  - report name" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="434,194" sap2010:WorkflowViewState.IdRef="NClick_1" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="444fa934-eebf-4f39-b598-1c78a2555573" Timeout="[CInt(in_Config(&quot;MediumTimeout&quot;))]" Version="V5">
+                    <Assign DisplayName="Assign a new DataTable to a variable" sap:VirtualizedContainerService.HintSize="416,175" sap2010:WorkflowViewState.IdRef="Assign_13">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="sd2:DataTable">[TempReportTable]</OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="sd2:DataTable">[New DataTable]</InArgument>
+                      </Assign.Value>
+                    </Assign>
+                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click -  - report name" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,194" sap2010:WorkflowViewState.IdRef="NClick_1" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="444fa934-eebf-4f39-b598-1c78a2555573" Timeout="[CInt(in_Config(&quot;MediumTimeout&quot;))]" Version="V5">
                       <uix:NClick.Target>
                         <uix:TargetAnchorable ContentHash="jLwLKFDktEO2ZnjGLbmDtA" DesignTimeRectangle="60, 301, 64, 18" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;wnd cls='SWT_GROUP' title='Trabajos y lotes' /&gt;&lt;wnd cls='SysTreeView32' /&gt;&lt;ctrl name='*' role='outline item' aastate='enfocable, seleccionable' /&gt;" Guid="a5dc540e-adfe-4f0b-86ce-8bdb20d4372d" InformativeScreenshot="da44eb5701cba44c092101cadec3e088.png" Reference="Y1oj9uOTOUGwIjjZFNnB3w/oPrZZdKxYUatkQk8yREkJw" ScopeSelectorArgument="&lt;wnd app='javaw.exe' cls='SWT_Window0' title='PosiSoft Desktop' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="[UiPath.UIAutomationNext.Enums.NWaitForReady.Complete]" />
                       </uix:NClick.Target>
                     </uix:NClick>
-                    <ui:InterruptibleWhile CurrentIndex="{x:Null}" Condition="True" DisplayName="While - scroll dows twice" sap:VirtualizedContainerService.HintSize="434,57" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1" MaxIterations="2">
+                    <ui:InterruptibleWhile CurrentIndex="{x:Null}" Condition="True" DisplayName="While - scroll dows twice" sap:VirtualizedContainerService.HintSize="416,57" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1" MaxIterations="2">
                       <ui:InterruptibleWhile.Body>
                         <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="450,452" sap2010:WorkflowViewState.IdRef="Sequence_3">
                           <sap:WorkflowViewStateService.ViewState>
@@ -284,7 +409,7 @@
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                     </ui:InterruptibleWhile>
-                    <ui:IfElseIfV2 Condition="[DateGreater]" DisplayName="Else If - date greater or less than" sap:VirtualizedContainerService.HintSize="434,57" sap2010:WorkflowViewState.IdRef="IfElseIfV2_1">
+                    <ui:IfElseIfV2 Condition="[DateGreater]" DisplayName="Else If - date greater or less than" sap:VirtualizedContainerService.HintSize="416,57" sap2010:WorkflowViewState.IdRef="IfElseIfV2_1">
                       <ui:IfElseIfV2.Else>
                         <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="450,25" sap2010:WorkflowViewState.IdRef="Sequence_11">
                           <sap:WorkflowViewStateService.ViewState>
@@ -358,17 +483,17 @@
                         </Sequence>
                       </ui:IfElseIfV2.Then>
                     </ui:IfElseIfV2>
-                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click - exportar menu" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="434,194" sap2010:WorkflowViewState.IdRef="NClick_2" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="444fa934-eebf-4f39-b598-1c78a2555573" Timeout="[CInt(in_Config(&quot;MediumTimeout&quot;))]" Version="V5">
+                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click - exportar menu" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,194" sap2010:WorkflowViewState.IdRef="NClick_2" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="444fa934-eebf-4f39-b598-1c78a2555573" Timeout="[CInt(in_Config(&quot;MediumTimeout&quot;))]" Version="V5">
                       <uix:NClick.Target>
                         <uix:TargetAnchorable ContentHash="Y86TsqSUhkCA2whtt4qW4w" DesignTimeRectangle="238, 31, 57, 19" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;ctrl automationid='MenuBar' name='Aplicación' role='menu bar' /&gt;&lt;ctrl name='Exportar' role='menu item' /&gt;" Guid="211870f1-9dc0-476d-b69e-8437b76cc45b" InformativeScreenshot="ff9e72cb154b9c755312abb4be71964e.png" Reference="Y1oj9uOTOUGwIjjZFNnB3w/J6VFF3lsaUmZ3DUglGy5cg" ScopeSelectorArgument="&lt;wnd app='javaw.exe' cls='*Window*' title='PosiSoft Desktop' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="[UiPath.UIAutomationNext.Enums.NWaitForReady.Complete]" />
                       </uix:NClick.Target>
                     </uix:NClick>
-                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click - lotes como texto CSV" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="434,194" sap2010:WorkflowViewState.IdRef="NClick_3" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="444fa934-eebf-4f39-b598-1c78a2555573" Timeout="[CInt(in_Config(&quot;MediumTimeout&quot;))]" Version="V5">
+                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click - lotes como texto CSV" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,194" sap2010:WorkflowViewState.IdRef="NClick_3" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="444fa934-eebf-4f39-b598-1c78a2555573" Timeout="[CInt(in_Config(&quot;MediumTimeout&quot;))]" Version="V5">
                       <uix:NClick.Target>
                         <uix:TargetAnchorable ContentHash="acl-asIFnkSYdj51axuZPg" DesignTimeRectangle="3, 3, 294, 22" ElementVisibilityArgument="[UiPath.UIAutomationNext.Enums.NElementVisibility.Visible]" FullSelectorArgument="&lt;ctrl name='Exportar' role='popup menu' /&gt;&lt;ctrl name='Lotes como texto CSV' role='menu item' /&gt;" Guid="df806adc-7243-4ab8-bcf7-a9b1d766d81d" InformativeScreenshot="ee7a9ad78c2655e45edec83de413b223.png" Reference="Y1oj9uOTOUGwIjjZFNnB3w/nDRwaxGrykGdFKAIT8YiCQ" ScopeSelectorArgument="&lt;wnd app='javaw.exe' cls='#*' idx='*' aastate='enfocable' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="[UiPath.UIAutomationNext.Enums.NWaitForReady.Complete]" />
                       </uix:NClick.Target>
                     </uix:NClick>
-                    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="[UiPath.UIAutomationNext.Enums.NAppCloseMode.Never]" DisplayName="Exportar lote(s)" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="434,57" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" OpenMode="[UiPath.UIAutomationNext.Enums.NAppOpenMode.Never]" ScopeGuid="d8091937-6292-4585-ad0b-12cc8be07339" Timeout="[CInt(in_Config(&quot;MediumTimeout&quot;))]" Version="V2">
+                    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="[UiPath.UIAutomationNext.Enums.NAppCloseMode.Never]" DisplayName="Exportar lote(s)" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="416,57" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" OpenMode="[UiPath.UIAutomationNext.Enums.NAppOpenMode.Never]" ScopeGuid="d8091937-6292-4585-ad0b-12cc8be07339" Timeout="[CInt(in_Config(&quot;MediumTimeout&quot;))]" Version="V2">
                       <uix:NApplicationCard.Body>
                         <ActivityAction x:TypeArguments="x:Object">
                           <ActivityAction.Argument>
@@ -415,7 +540,7 @@
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                     </uix:NApplicationCard>
-                    <ui:GetLastDownloadedFile File="{x:Null}" FileResource="{x:Null}" Timeout="{x:Null}" DisplayName="Wait for Download - temp report" DownloadFolder="[Path.GetDirectoryName(FinalReportPath)]" sap:VirtualizedContainerService.HintSize="434,506" sap2010:WorkflowViewState.IdRef="GetLastDownloadedFile_1" IgnoreFiles="tmp,dwn">
+                    <ui:GetLastDownloadedFile File="{x:Null}" FileResource="{x:Null}" Timeout="{x:Null}" DisplayName="Wait for Download - temp report" DownloadFolder="[Path.GetDirectoryName(FinalReportPath)]" sap:VirtualizedContainerService.HintSize="416,57" sap2010:WorkflowViewState.IdRef="GetLastDownloadedFile_1" IgnoreFiles="tmp,dwn">
                       <ui:GetLastDownloadedFile.Body>
                         <ActivityAction>
                           <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DisplayName="Type Into - Save As PopUp" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="400,214" sap2010:WorkflowViewState.IdRef="NTypeInto_1" InteractionMode="SameAsCard" ScopeIdentifier="444fa934-eebf-4f39-b598-1c78a2555573" Text="[String.Format(&quot;{0}[k(enter)]&quot;, FinalReportPath)]" Timeout="[CInt(in_Config(&quot;MediumTimeout&quot;))]" Version="V5">
@@ -425,9 +550,15 @@
                           </uix:NTypeInto>
                         </ActivityAction>
                       </ui:GetLastDownloadedFile.Body>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
                     </ui:GetLastDownloadedFile>
-                    <ui:ReadCsvFile PathResource="{x:Null}" DataTable="[TempReportTable]" Delimitator="Comma" DelimitatorForViewModel="Comma" DisplayName="Read CSV - temp report" FilePath="[FinalReportPath]" sap:VirtualizedContainerService.HintSize="434,170" sap2010:WorkflowViewState.IdRef="ReadCsvFile_2" />
-                    <If Condition="[TempReportTable.AsEnumerable.Any(Function (row) row(&quot;Batch_Date/Time&quot;).ToString.Replace(&quot;/&quot;,&quot;-&quot;).Trim.Contains(in_TransactionItem))]" DisplayName="If - is the right report" sap:VirtualizedContainerService.HintSize="434,48" sap2010:WorkflowViewState.IdRef="If_2">
+                    <ui:ReadCsvFile PathResource="{x:Null}" DataTable="[TempReportTable]" Delimitator="Comma" DelimitatorForViewModel="Comma" DisplayName="Read CSV - temp report" FilePath="[FinalReportPath]" sap:VirtualizedContainerService.HintSize="416,170" sap2010:WorkflowViewState.IdRef="ReadCsvFile_2" />
+                    <If Condition="[TempReportTable.AsEnumerable.Any(Function (row) row(&quot;Batch_Date/Time&quot;).ToString.Replace(&quot;/&quot;,&quot;-&quot;).Trim.Contains(in_TransactionItem))]" DisplayName="If - is the right report" sap:VirtualizedContainerService.HintSize="416,48" sap2010:WorkflowViewState.IdRef="If_2">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -533,18 +664,24 @@
               </ui:RetryScope.ActivityBody>
               <ui:RetryScope.Condition>
                 <ActivityFunc x:TypeArguments="x:Boolean">
-                  <ui:CheckFalse ErrorMessage="{x:Null}" DisplayName="Check False - no need to retry" Expression="[RetryDownload]" sap:VirtualizedContainerService.HintSize="444,131" sap2010:WorkflowViewState.IdRef="CheckFalse_1" />
+                  <ui:CheckFalse ErrorMessage="{x:Null}" DisplayName="Check False - no need to retry" Expression="[RetryDownload]" sap:VirtualizedContainerService.HintSize="426,131" sap2010:WorkflowViewState.IdRef="CheckFalse_1" />
                 </ActivityFunc>
               </ui:RetryScope.Condition>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
             </ui:RetryScope>
-            <ui:LogMessage DisplayName="Log Message - report downloaded" sap:VirtualizedContainerService.HintSize="470,175" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;El reporte: &quot;+Path.GetFileNameWithoutExtension(FinalReportPath).Trim+&quot; fue descargado de PosiSoft&quot;]" />
-            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="TakeScreenshot - Invoke Workflow File (Framework\TakeScreenshot.xaml)" sap:VirtualizedContainerService.HintSize="470,177" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Framework\TakeScreenshot.xaml">
+            <ui:LogMessage DisplayName="Log Message - report downloaded" sap:VirtualizedContainerService.HintSize="452,175" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;El reporte: &quot;+Path.GetFileNameWithoutExtension(FinalReportPath).Trim+&quot; fue descargado de PosiSoft&quot;]" />
+            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="TakeScreenshot - Invoke Workflow File (Framework\TakeScreenshot.xaml)" sap:VirtualizedContainerService.HintSize="452,177" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Framework\TakeScreenshot.xaml">
               <ui:InvokeWorkflowFile.Arguments>
                 <InArgument x:TypeArguments="x:String" x:Key="in_Folder" />
                 <InOutArgument x:TypeArguments="x:String" x:Key="io_FilePath">[ScreenshotPath]</InOutArgument>
               </ui:InvokeWorkflowFile.Arguments>
             </ui:InvokeWorkflowFile>
-            <If Condition="[File.Exists(ScreenshotPath)]" DisplayName="Move screenshot if exists" sap:VirtualizedContainerService.HintSize="470,430" sap2010:WorkflowViewState.IdRef="If_5">
+            <If Condition="[File.Exists(ScreenshotPath)]" DisplayName="Move screenshot if exists" sap:VirtualizedContainerService.HintSize="452,654" sap2010:WorkflowViewState.IdRef="If_5">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -552,13 +689,14 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
               <If.Then>
-                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="450,275" sap2010:WorkflowViewState.IdRef="Sequence_20">
+                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="450,499" sap2010:WorkflowViewState.IdRef="Sequence_20">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:CopyFile ContinueOnError="{x:Null}" DestinationResource="{x:Null}" PathResource="{x:Null}" Destination="[String.Format(in_Config(&quot;PosiSoftScreenshotPath&quot;).ToString.Trim,Now.ToString(&quot;dd_MM_yyyy&quot;))]" DisplayName="Copy a file to a destination" sap:VirtualizedContainerService.HintSize="416,215" sap2010:WorkflowViewState.IdRef="CopyFile_1" Overwrite="True" Path="[ScreenshotPath]" />
+                  <ui:CopyFile ContinueOnError="{x:Null}" DestinationResource="{x:Null}" PathResource="{x:Null}" Destination="[String.Format(in_Config(&quot;PosiSoftScreenshotPath&quot;).ToString.Trim,Now.ToString(&quot;dd_MM_yyyy&quot;))]" DisplayName="Copy a file to a destination png" sap:VirtualizedContainerService.HintSize="416,224" sap2010:WorkflowViewState.IdRef="CopyFile_1" Overwrite="True" Path="[ScreenshotPath]" />
+                  <ui:CopyFile ContinueOnError="{x:Null}" DestinationResource="{x:Null}" PathResource="{x:Null}" Destination="[String.Format(in_Config(&quot;PosiSoftScreenshotPath&quot;).ToString.Trim,Now.ToString(&quot;dd_MM_yyyy&quot;)).Replace(&quot;png&quot;,&quot;csv&quot;)]" DisplayName="Copy a file to a destination csv" sap:VirtualizedContainerService.HintSize="416,215" sap2010:WorkflowViewState.IdRef="CopyFile_2" Overwrite="True" Path="[FinalReportPath]" />
                 </Sequence>
               </If.Then>
               <If.Else>
